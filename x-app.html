@@ -1,0 +1,192 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<link rel="import" href="bower_components/app-layout/demo/sample-content.html">
+
+<dom-module id="x-app">
+
+  <template>
+
+    <style>
+
+      a {
+        text-decoration: none;
+        font-size: inherit;
+        color: #fff;
+      }
+
+      .tabs {
+        height: 100%;
+        @apply(--layout-horizontal);
+      }
+
+      .tabs > a {
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+        margin: 32px 16px 0px;
+      }
+
+      header {
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+        height: calc(100vh - 64px);
+        padding: 0 16px;
+        background-image: url('map-background.jpg');
+        backgrond-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+      }
+
+      header > h2 {
+        font-size: 56px;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      header > p {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 88px 16px;
+      }
+
+      .container {
+        @apply(--layout-horizontal);
+        max-width: 80vw;
+        margin: 0 auto;
+      }
+
+      .container > * {
+        @apply(--layout-flex);
+      }
+
+      .container img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .container h3 {
+        font-size: 32px;
+        font-weight: 300;
+        margin: 24px 0;
+      }
+
+      .container p {
+        line-height: 1.5;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          @apply(--layout-vertical);
+        }
+      }
+      app-header {
+        --app-header-background-front-layer: {
+          background:rgba(238,30,123,1);};
+      }
+      app-header {
+        --app-header-background-rear-layer: {
+          background:rgba(238,30,123,.9);};
+      }
+
+      [main-title], [condensed-title] {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+    </style>
+
+    <app-header-layout>
+
+      <app-header style="height: 96px;" effects="fade-background resize-title" condenses fixed>
+        <app-toolbar style="height: 64px;">
+          <div condensed-title>ArtHopr</div>
+          <div class="tabs">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#checkitout">App</a>
+          </div>
+        </app-toolbar>
+         <app-toolbar style="height: 16px;">
+          <h4 main-title>ArtHopr</h4>
+        </app-toolbar>
+      </app-header>
+
+      <header>
+        <h2>A location based app</h2>
+        <p>With a <strong>gamified</strong> component</p>
+      </header>
+
+      <section id="about">
+        <div class="container">
+          <div>
+            <img src="//app-layout-assets.appspot.com/assets/landing-page/berries.jpg">
+          </div>
+          <div>
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.</p>
+            <p>Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no. Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container">
+          <div>
+            <img src="//app-layout-assets.appspot.com/assets/landing-page/tomato.jpg">
+          </div>
+          <div>
+            <h3>Features</h3>
+            <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="checkitout">
+        <div class="container">
+          <div>
+            <img src="//app-layout-assets.appspot.com/assets/landing-page/red-onion.jpg">
+          </div>
+          <div>
+            <h3>Check out the app</h3>
+            <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.</p>
+          </div>
+        </div>
+      </section>
+
+    </app-header-layout>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'x-app'
+
+    });
+
+  </script>
+
+</dom-module>
