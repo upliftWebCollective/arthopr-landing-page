@@ -33,6 +33,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-size: inherit;
         color: #fff;
       }
+      .desc a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #6042ce;
+      }
 
       .tabs {
         height: 100%;
@@ -94,6 +99,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .container p {
         line-height: 1.5;
+        font-size: 1.2em;
       }
 
       @media (max-width: 600px) {
@@ -114,6 +120,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: #fff;
         font-size: 1.5em;
         font-weight: 500;
+      }
+      h1.mainHeading {
+        font-weight: 400;
+        font-size: 3em;
+      }
+      h2.mainHeading {
+        font-weight: 500;
+        font-size: 2.5em;
+      }
+      h3.mainHeading {
+        font-weight: 300;
+        font-size: 1.8em;
+        color: #333;
       }
     </style>
 
@@ -141,12 +160,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <section id="about">
         <div class="container">
           <div>
-            <img src="//app-layout-assets.appspot.com/assets/landing-page/berries.jpg">
+            <img src="img/iPhone-screenshot.png">
           </div>
-          <div>
-            <h3>About</h3>
-            <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.</p>
-            <p>Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no. Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no.</p>
+          <div style="padding-left: 2vw;" class="desc">
+            <h1 class="mainHeading">About <span style="font-weight: 700; color:rgba(238,30,123,1);">Arthopr</span></h1>
+            <p>A simple web app to go to Arthop locations, get codes, and score points.</p>
+            <h2 class="mainHeading" style="color:#12a79d">Why we created this app?</h2>
+            <p>It started out as sample code for a codelab with <a href="https://valleydevfest.com/" target="_blank">DevFest 2016 in Fresno, CA</a>
+              with a couple members of <a href="http://frescode.xyz/" target="_blank">Free Code Camp Fresno</a>
+              and <a href="http://upliftwebcollective.com" target="_blank">Uplift Web Collective</a>.
+            </p>
+            <h3 class="mainHeading">We decided to continue working on the app </h3>
+            <p>And it was a unique collaboration between novices looking to gain experience
+              and professionals that provided their guidance and mentorship.</p>
+              <img src="//cdn-images-1.medium.com/max/800/1*kwh52qVBogWtN2TsdofVrQ.jpeg" alt="">
+              <a href="https://valleydevfest.com/" target="_blank">
+                <img src="img/DevFest-Logo.png" alt="">
+              </a>
+              <a href="http://frescode.xyz/" target="_blank">
+                <img src="https://avatars0.githubusercontent.com/u/16391890?v=3&s=200" alt="">
+              </a>
+              <a href="http://upliftwebcollective.com" target="_blank">
+                <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAerAAAAJDhkNmQwOGY3LTk2YjEtNDQwNS1iOWE1LTdlNWQ5MDQ4NjNiZg.png" alt="">
+              </a>
           </div>
         </div>
       </section>
