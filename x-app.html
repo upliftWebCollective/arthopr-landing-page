@@ -138,6 +138,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       li {
         padding-bottom: 2em;
       }
+      #logo-main {
+        width: 265px;
+      }
+      #logo-condensed {
+        width: 150px;
+        margin-top: 1em;
+      }
+      @media (max-width: 600px) {
+        #logo-main {
+          width: 85px;
+        }
+        #logo-condensed {
+          width: 75px;
+        }
+      }
 
     </style>
 
@@ -145,7 +160,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <app-header style="height: 96px;" effects="fade-background resize-title" condenses fixed>
         <app-toolbar style="height: 64px;">
-          <div condensed-title>ArtHopr</div>
+          <div condensed-title><img src="img/arthpr-logo.png" id="logo-condensed" alt=""></div>
           <div class="tabs">
             <a href="#about">About</a>
             <a href="#features">Features</a>
@@ -153,7 +168,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </div>
         </app-toolbar>
          <app-toolbar style="height: 16px;">
-          <h4 main-title>ArtHopr</h4>
+          <h4 main-title><img src="img/arthpr-logo.png" id="logo-main" alt=""></h4>
         </app-toolbar>
       </app-header>
 
