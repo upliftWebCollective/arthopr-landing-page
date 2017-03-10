@@ -13,6 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="bower_components/iron-icons/image-icons.html">
+<link rel="import" href="bower_components/iron-icons/maps-icons.html">
+<link rel="import" href="bower_components/iron-icons/social-icons.html">
 
 <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 
@@ -22,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
 
 <link rel="import" href="bower_components/app-layout/demo/sample-content.html">
-
+<link rel="import" href="bower_components/l2t-paper-slider/l2t-paper-slider.html">
 <dom-module id="x-app">
 
   <template>
@@ -154,6 +156,42 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
 
+      @media (max-width: 1440px) {
+      .styledDots {
+        --paper-slide-width: 100%;
+        --paper-slide-height: 100%;
+        --paper-slide-dot: transparent;
+        --paper-slide-dot-selected: rgba(255, 255, 36, 0.74902);
+        --paper-slide-dot-styles: {
+          width: 24px;
+          height: 8px;
+          margin: 6px;
+          border-width: 4px;
+          border-style: inset;
+          border-color: pink;
+          padding: 2px;
+          box-shadow: inset 0 0 5px 1px rgba(0,0,0,0);
+        }
+      }
+    }
+    .big {
+      --iron-icon-height: 99%;
+      --iron-icon-width: 99%;
+      z-index:9999;
+      color: #FFF;
+    }
+    .styledDots {
+      --paper-slider-dot-container-styles: {
+        bottom:0%;
+        opacity: .3;
+      }
+    }
+    @media (min-width: 1440px) {
+      .styledDots {
+        --paper-slide-width: 500px;
+        --paper-slide-height: 500px ;
+      }
+    }
     </style>
 
     <app-header-layout>
@@ -210,13 +248,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <section id="features">
         <div class="container">
           <div>
-            <img src="//app-layout-assets.appspot.com/assets/landing-page/tomato.jpg">
+            <div class="container half-height" style="margin-top: 3em;">
+              <l2t-paper-slider class="styledDots" total-slides="5" auto-progress slide-duration="1">
+                <paper-slide style="background: #EE1E7B;">
+                  <img src="img/gmail.png" alt="" style="position:absolute;top:50%;transform:translateY(-50%)">
+                </paper-slide>
+                <paper-slide style="background:#F167A4">
+                  <iron-icon icon="maps:my-location" class="big"></iron-icon>
+                </paper-slide>
+                <paper-slide style="background: #EE1E7B;">
+                  <iron-icon icon="social:location-city" class="big"></iron-icon>
+                </paper-slide>
+                <paper-slide style="background:#F167A4">
+                  <iron-icon icon="maps:add-location" class="big"></iron-icon>
+                </paper-slide>
+                <paper-slide style="background: #EE1E7B;">
+                  <iron-icon icon="icons:grade" class="big"></iron-icon>
+                </paper-slide>
+
+              </l2t-paper-slider>
+            </div>
           </div>
           <div>
             <h1 class="mainHeading">Features</h1>
             <ul style="list-style-type:none; padding-left:1em;">
               <li>
-                <iron-icon icon="image:adjust" style="color: rgba(238,30,123,.9);"></iron-icon>
+                <iron-icon icon="image:adjust" style="color: rgba(238,30,123,.9);" size="48"></iron-icon>
                 Login with gmail account <br>
               </li>
               <li>
